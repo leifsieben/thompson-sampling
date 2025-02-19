@@ -85,6 +85,9 @@ smiles strings of valid reagents for that component.
 - `num_warmup_trials`: Required. Number of times to randomly sample each reagent in the reaction. 3 is usually sufficient
 for 2 component reactions, 10 is recommended for reactions with 3 or more components.
 - `ts_mode`: Required. Whether to maximize or minimize the scoring function. Should be one of `maximize` or `minimize`.
+Alternatively `maximize_boltzmann` or `minimize_boltzmann` can be used to allow for temperature weighted exploration. 
+- `batch_size`: Required. Determines how many molecules are evaluated before updating priors. `batch_size=1` gives back
+original results.
 
 Optional params:
 - `results_filename`: Optional. Name of the file to output results to. If None, results will not be saved to a file.
